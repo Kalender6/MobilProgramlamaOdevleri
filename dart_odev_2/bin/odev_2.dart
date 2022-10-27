@@ -66,22 +66,22 @@ class HesapMakinasi {
       double ilk_sayi = double.parse(girdi1);
       double ikinci_sayi = double.parse(girdi2);
 
-      HesapMakinasi calc = new HesapMakinasi(ilk_sayi, ikinci_sayi);
+      HesapMakinasi calistir = new HesapMakinasi(ilk_sayi, ikinci_sayi);
 
       switch (operation) {
           case "+":
             print(
-                "${calc.a} + ${calc.b} = ${calc.toplama(ilk_sayi, ikinci_sayi)}");
+                "${calistir.a} + ${calistir.b} = ${calistir.toplama(ilk_sayi, ikinci_sayi)}");
             backToMenu();
             break;
           case "-":
             print(
-                "${calc.a} - ${calc.b} = ${calc.cikarma(ilk_sayi, ikinci_sayi)}");
+                "${calistir.a} - ${calistir.b} = ${calistir.cikarma(ilk_sayi, ikinci_sayi)}");
             backToMenu();
             break;
           case "*":
             print(
-                "${calc.a} * ${calc.b} = ${calc.carpma(ilk_sayi, ikinci_sayi)}");
+                "${calistir.a} * ${calistir.b} = ${calistir.carpma(ilk_sayi, ikinci_sayi)}");
             backToMenu();
             break;
           case "/":
@@ -90,7 +90,7 @@ class HesapMakinasi {
               backToMenu();
             } else {
               print(
-                  "${calc.a} / ${calc.b} = ${calc.bolme(ilk_sayi, ikinci_sayi)}");
+                  "${calistir.a} / ${calistir.b} = ${calistir.bolme(ilk_sayi, ikinci_sayi)}");
               backToMenu();
             }
             break;
