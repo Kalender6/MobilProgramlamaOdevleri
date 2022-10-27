@@ -4,15 +4,14 @@ import 'dart:io';
 void main(List<String> args) {
   print('''
     HESAP MAKİNESİ
-    1- Toplama
-    2- Çıkarma
-    3- Çarpma
-    4- Bölme''');
+    1- +
+    2- -
+    3- *
+    4- /''');
   HesapMakinasi.calistir();
 }
 
 class HesapMakinasi {
-
   var a;
   var b;
 
@@ -43,12 +42,11 @@ class HesapMakinasi {
   }
 
   static void calistir() {
-      print(r"('0' yazılması durumunda çıkış yapılacaktır.)");
-      print("İlk sayıyı giriniz: ");
-      var girdi1 = stdin.readLineSync();
-      if (girdi1 != null) {
-        double.parse(girdi1);
-      }
+    print(r"('0' yazılması durumunda çıkış yapılacaktır.)");
+    print("İlk sayıyı giriniz: ");
+    var girdi1 = stdin.readLineSync();
+    if (girdi1 != null) {
+      double.parse(girdi1);
 
       if (double.parse(girdi1) == 0) {
         print("Hesap makinesinden çıkılıyor.");
@@ -58,17 +56,16 @@ class HesapMakinasi {
       print("İkinci sayıyı giriniz: ");
       var girdi2 = stdin.readLineSync();
       if (girdi2 != null) {
-          double.parse(girdi2);
-      }
+        double.parse(girdi2);
 
-      print("Islem seciniz: ");
-      var operation = stdin.readLineSync();
-      double ilk_sayi = double.parse(girdi1);
-      double ikinci_sayi = double.parse(girdi2);
+        print("Islem seciniz: ");
+        var operation = stdin.readLineSync();
+        double ilk_sayi = double.parse(girdi1);
+        double ikinci_sayi = double.parse(girdi2);
 
-      HesapMakinasi calistir = new HesapMakinasi(ilk_sayi, ikinci_sayi);
+        HesapMakinasi calistir = new HesapMakinasi(ilk_sayi, ikinci_sayi);
 
-      switch (operation) {
+        switch (operation) {
           case "+":
             print(
                 "${calistir.a} + ${calistir.b} = ${calistir.toplama(ilk_sayi, ikinci_sayi)}");
